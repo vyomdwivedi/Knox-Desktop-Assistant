@@ -1,14 +1,14 @@
-# Windows Based
-import pyttsx3 # pip install pyttsx3
+# # Windows Based
+# import pyttsx3 # pip install pyttsx3
 
-def speak(Text):
-    engine = pyttsx3.init("sapi5")
-    voices = engine.getProperty('voices')
-    engine.setProperty('voices', voices[1].id)
-    print()
-    print(f"You: {Text}.")
-    engine.say(Text)
-    engine.runAndWait()
+# def Speak(Text):
+    # engine = pyttsx3.init("sapi5")
+    # voices = engine.getProperty('voices')
+    # engine.setProperty('voices', voices[1].id)
+    # print()
+    # print(f"You: {Text}.")
+    # engine.say(Text)
+    # engine.runAndWait()
 
 # Chrome Based
 from selenium import webdriver # pip install selenium==4.1.3
@@ -19,7 +19,7 @@ from time import sleep
 
 chrome_options = Options()
 chrome_options.add_argument('--log-level=3')
-chrome_options.headless = False
+chrome_options.headless = True
 Path = "Knox Desktop Assistant\\DataBase\\chromedriver.exe"
 driver = webdriver.Chrome(Path,options=chrome_options)
 driver.maximize_window()
@@ -64,5 +64,3 @@ def Speak(Text):
         
         else:
             sleep(2)
-
-Speak("Hello, Knox here")
