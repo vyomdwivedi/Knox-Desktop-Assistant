@@ -1,9 +1,6 @@
 import speech_recognition as sr
 import os
 
-from Knox import MainExe
-from Body.Speak import Speak
-
 def Listen():
     r = sr.Recognizer()
 
@@ -24,10 +21,11 @@ def Listen():
     return query
 
 def WakeUpDetected():
-    queery = Listen().lower()
+    query = Listen().lower()
 
-    if "wake up" in queery:
-        MainExe()
+    if "wake up" in query:
+        os.startfile(r"C:\\Users\\vyomd\\OneDrive\\Desktop\\Programming\\Knox Desktop Assistant\\main.py") #Your main.py file's path
+
     else:
         pass
 

@@ -12,7 +12,7 @@ def Listen():
     
     try:
         print("Recognizing...")
-        query = r.recognize_google(audio, language = "hi")
+        query = r.recognize_google(audio, language = "en")
     
     except:
         return ""
